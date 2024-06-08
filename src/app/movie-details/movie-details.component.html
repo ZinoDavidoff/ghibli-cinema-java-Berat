@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div>
+    <!-- <button routerLink="/movies">Go To All Movies</button> -->
+    <!-- Property binding -->
+    <img [src]="movie.image" alt="img">
+  </div>
+
+  <div>
+    <h2>{{ movie.title }}</h2>
+    <p>{{ movie.description }}</p>
+    <p>{{ movie.original_title }}</p>
+    <p>{{ movie.release_date }}</p>
+    <p>{{ movie.director }}</p>
+  </div>
+</div>

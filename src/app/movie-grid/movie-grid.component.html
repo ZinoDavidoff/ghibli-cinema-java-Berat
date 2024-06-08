@@ -1,0 +1,23 @@
+
+<div class="title-container">
+  <h2>{{ title }}</h2>
+  <input
+    type="text"
+    placeholder="Search by title"
+    #searchTerm
+    (input)="filterMovies(searchTerm.value)"
+  >
+</div>
+<div class="movie-grid-container">
+  <div class="movie-card" *ngFor="let movie of filteredMovies">
+
+    <h3>{{ movie.title }}</h3>
+    <!-- Property binding -->
+    <!-- http://localhost:3000/movies/5fdfb320-2a02-49a7-94ff-5ca418cae602 -->
+    <img [routerLink]="'/movies/' + movie.id" [src]="movie.image" alt="img">
+    <p>Description: {{ movie.description }}</p>
+    <p>Director: {{ movie.director }}</p>
+    <p>Release Date: {{ movie.release_date }}</p>
+    <p>Rotten Tomato Score: {{ movie.rt_score }}%</p>
+  </div>
+</div>
